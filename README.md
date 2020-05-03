@@ -44,4 +44,9 @@ The creation of the stack will take some time. Progress can be observed in Cloud
 
 }
 
-**Note**: In line 271 of _infrastructure.yml_, change the file-URL to whatever-index.html is provided in order to host another static website. Currently, the index file of the first project of the first project of Udacity's Cloud DevOps Engineer Nanodegree Program is added here and will be displayed as long as the bucket exists.
+**Note**: In line 271 of _infrastructure.yml_, change the file-URL to whatever-index.html is provided in order to host another static website. Currently, the index file of the first project of Udacity's Cloud DevOps Engineer Nanodegree Program is added here and will be displayed as long as the bucket exists.
+
+### Stack Outputs
+The outputs of the stack have the prefix _MyHighAvailabilityWebApp_ as defined in parameters.json. The URL of the website is found in outputs as well:
+
+![creation_of_stack](stack_outputs_and_http.png)
