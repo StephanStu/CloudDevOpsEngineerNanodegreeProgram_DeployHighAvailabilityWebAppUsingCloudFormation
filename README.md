@@ -17,18 +17,23 @@ The load balancer should allow all public traffic (0.0.0.0/0) on port 80 inbound
 The application needs to be deployed into private subnets with a Load Balancer located in a public subnet.
 One of the output exports of the CloudFormation script is the public URL of the LoadBalancer.
 
-## Solution: Diagram
-
 ## Solution: Deployment
 After downloading, installing the AWS command-line interface (AWS CLI, see [here](https://docs.aws.amazon.com/cli/index.html)),
 deployment on your machine takes two steps. First, 'create.sh' must be given execution permissions  on the local machine. Then the 'create.sh' must be called with the desired name of the stack and reference to both the infrastructure and it's parameters.
 ### Enable 'create.sh' on your machine
-On MAC and Linux give execution permissions to 'create.sh' by
+On MAC-OS or Linux give execution permissions to 'create.sh' by
 
 
 $ chmod u+x create.sh
 ### Create stack using CloudFormation
-A user is needed which has rights _arn:aws:iam::aws:policy/AdministratorAccess_. The AWS CLI has to be configured with this user first. Then on MUC or Linux create the infrastructure by
+A user is needed which has rights _arn:aws:iam::aws:policy/AdministratorAccess_. The AWS CLI has to be configured with this user first. Then on MAC-OS or Linux create the infrastructure by
 
 
-$ ./create.sh test infrastructure.yml parameters.json
+$ ./create.sh <Name of the stack> infrastructure.yml parameters.json
+
+The creation of the stack will take some time. Note: Instances will be created in AvailabilityZone _!Select [ 0, !GetAZs '' ]_ - in the author's account this creates servers in Ireland. This can be observed in the console. The response of the AWS CLI reads as follows:
+{
+    "StackId": "arn:aws:cloudformation:eu-west-1:793553224113:stack/test/2693bcc0-8d5e-11ea-bd6c-0609694b6370"
+}
+
+![creation_of_stack](creation_of_stack.png)
