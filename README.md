@@ -31,8 +31,11 @@ A user is needed which has rights _arn:aws:iam::aws:policy/AdministratorAccess_.
 
 $ ./create.sh test infrastructure.yml parameters.json
 
-The creation of the stack will take some time.
-test can be replaced by another name for the stack.
+_test_ can be replaced by another name for the stack, e.g. _MyStack_ or _my_infra_. It is the name that appears in CloudFormation/Stacks.
+The creation of the stack will take some time. Progress can be observed in CloudFormation/Stacks as displayed below.
+
+![creation_of_stack](creation_of_stack.png)
+
 Note: Instances will be created in AvailabilityZone _!Select [ 0, !GetAZs '' ]_ - in the author's account this creates servers in Ireland. This can be observed in the console. The response of the AWS CLI reads as follows:
 
 {
@@ -40,5 +43,3 @@ Note: Instances will be created in AvailabilityZone _!Select [ 0, !GetAZs '' ]_ 
     "StackId": "arn:aws:cloudformation:eu-west-1:793553224113:stack/test/2693bcc0-8d5e-11ea-bd6c-0609694b6370"
 
 }
-
-![creation_of_stack](creation_of_stack.png)
