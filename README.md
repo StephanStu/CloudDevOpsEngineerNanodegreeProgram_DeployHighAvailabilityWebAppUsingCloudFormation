@@ -36,10 +36,12 @@ The creation of the stack will take some time. Progress can be observed in Cloud
 
 ![creation_of_stack](creation_of_stack.png)
 
-Note: Instances will be created in AvailabilityZone _!Select [ 0, !GetAZs '' ]_ - in the author's account this creates servers in Ireland. This can be observed in the console. The response of the AWS CLI reads as follows:
+**Note**: Instances will be created in AvailabilityZone _!Select [ 0, !GetAZs '' ]_ - in the author's account this creates servers in Ireland. This can be observed in the console. The response of the AWS CLI reads as follows:
 
 {
 
     "StackId": "arn:aws:cloudformation:eu-west-1:793553224113:stack/test/2693bcc0-8d5e-11ea-bd6c-0609694b6370"
 
 }
+
+**Note**: In line 271 of _infrastructure.yml_, change the file-URL to whatever-index.html is provided in order to host another static website. Currently, the index file of the first project of the first project of Udacity's Cloud DevOps Engineer Nanodegree Program is added here and will be displayed as long as the bucket exists.
