@@ -29,11 +29,16 @@ $ chmod u+x create.sh
 A user is needed which has rights _arn:aws:iam::aws:policy/AdministratorAccess_. The AWS CLI has to be configured with this user first. Then on MAC-OS or Linux create the infrastructure by
 
 
-$ ./create.sh <Name of the stack> infrastructure.yml parameters.json
+$ ./create.sh test infrastructure.yml parameters.json
 
-The creation of the stack will take some time. Note: Instances will be created in AvailabilityZone _!Select [ 0, !GetAZs '' ]_ - in the author's account this creates servers in Ireland. This can be observed in the console. The response of the AWS CLI reads as follows:
+The creation of the stack will take some time.
+test can be replaced by another name for the stack.
+Note: Instances will be created in AvailabilityZone _!Select [ 0, !GetAZs '' ]_ - in the author's account this creates servers in Ireland. This can be observed in the console. The response of the AWS CLI reads as follows:
+
 {
+
     "StackId": "arn:aws:cloudformation:eu-west-1:793553224113:stack/test/2693bcc0-8d5e-11ea-bd6c-0609694b6370"
+
 }
 
 ![creation_of_stack](creation_of_stack.png)
