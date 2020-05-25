@@ -2,9 +2,8 @@
 
 This repository is part of my journey through Udacity's Cloud DevOps Engineer Nanodegree Program. The project was rated as passed in April 2020.
 
-## Project-Overview: The _Tech-Case_
-A company is creating a web application. Developers will push the latest version of their code in a zip file located in a public S3 Bucket.
-The creation of the infrastructure for this application eeds to be done in an automated fashion so that the infrastructure can be discarded as soon as the testing team finishes their tests and gathers their results.
+## Project-Overview
+Imagine the following situation: A company is creating a web application. Developers will push the latest version of their code in a zip file located in a public S3 Bucket. The creation of the infrastructure for this application needs to be done in an automated fashion so that the infrastructure can be discarded as soon as the testing team finishes their tests and gathers their results.
 
 ## Project-Requirements: Server specifications
 A Launch Configuration is needed for application servers in order to deploy four servers, two located in each of the private subnets. The launch configuration will be used by an auto-scaling group.
