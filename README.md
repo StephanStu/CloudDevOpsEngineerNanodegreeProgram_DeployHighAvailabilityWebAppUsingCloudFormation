@@ -2,7 +2,7 @@
 
 This repository is part of my journey through Udacity's Cloud DevOps Engineer Nanodegree Program. The project was rated as passed in April 2020.
 
-## Project-Requirements: The _Tech-Case_
+## Project-Overview: The _Tech-Case_
 A company is creating a web application. Developers will push the latest version of their code in a zip file located in a public S3 Bucket.
 The creation of the infrastructure for this application eeds to be done in an automated fashion so that the infrastructure can be discarded as soon as the testing team finishes their tests and gathers their results.
 
